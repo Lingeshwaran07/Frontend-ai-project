@@ -1,0 +1,94 @@
+/* ======================================================================== */
+/*                                                                        */
+/*   ENTERPRISE-READY SPACING SYSTEM (Desktop-First, Universal Support)   */
+/*                                                                        */
+/*  - Method: Traditional Media Queries (`max-width`) for compatibility.    */
+/*  - Naming Convention: Clear, scalable Numerical Scale (`--space-1`).     */
+/*  - Strategy: Desktop-First. Defaults are for large monitors, then      */
+/*              styles are scaled down for smaller viewports.             */
+/*  - Unit: `rem` for accessibility (handles browser zoom gracefully).      */
+/*                                                                        */
+/* ======================================================================== */
+
+:root {
+  /* ==================================================================== */
+  /*  1. STATIC TOKEN                                                     */
+  /*  A fixed value that never changes across breakpoints. for borders              */
+  /* ==================================================================== */
+
+  /** 1px (based on a 16px root font size) */
+  --space-px: 0.0625rem;
+
+
+  /* ==================================================================== */
+  /*  DEFAULT SPACING SCALE (DESKTOP)                                     */
+  /*  These are the default, generous values for a large desktop monitor  */
+  /*  (> 1024px). This is the primary experience for your VDI users.       */
+  /* ==================================================================== */
+
+  --space-1: 0.5rem;      /* 8px */
+  --space-2: 0.75rem;     /* 12px */
+  --space-3: 1rem;        /* 16px */
+  --space-4: 1.25rem;     /* 20px */
+  --space-5: 1.5rem;      /* 24px */
+  --space-6: 2rem;        /* 32px */
+  --space-8: 3rem;        /* 48px */
+  --space-12: 4.5rem;     /* 72px */
+  --space-16: 6rem;       /* 96px */
+
+  /* Aliased token for standard component padding */
+  --space-inset: var(--space-4);
+
+  /* Tokens for large page layout sections */
+  --space-section-md: 7.5rem; /* 120px */
+  --space-section-lg: 10rem;  /* 160px */
+}
+
+
+/* ======================================================================== */
+/*  MAJOR BREAKPOINT 1: TABLET & SMALLER LAPTOPS                            */
+/*  Applies when the browser window is 1024px wide or smaller.            */
+/* ======================================================================== */
+@media (max-width: 1024px) {
+  :root {
+    /* Revert to a more standard, less generous scale for medium screens */
+    --space-1: 0.375rem;   /* 6px */
+    --space-2: 0.625rem;   /* 10px */
+    --space-3: 0.875rem;   /* 14px */
+    --space-4: 1.125rem;   /* 18px */
+    --space-5: 1.375rem;   /* 22px */
+    --space-6: 1.75rem;    /* 28px */
+    --space-8: 2.5rem;     /* 40px */
+    --space-12: 3.75rem;   /* 60px */
+    --space-16: 5rem;      /* 80px */
+
+    --space-section-md: 6rem; /* 96px */
+    --space-section-lg: 8rem; /* 128px */
+  }
+}
+
+
+/* ======================================================================== */
+/*  MAJOR BREAKPOINT 2: MOBILE DEVICES                                      */
+/*  Applies when window is 767px wide or smaller.                         */
+/* ======================================================================== */
+@media (max-width: 767px) {
+  :root {
+    /* Use a compact scale suitable for small touch screens */
+    --space-1: 0.25rem;    /* 4px */
+    --space-2: 0.5rem;     /* 8px */
+    --space-3: 0.75rem;    /* 12px */
+    --space-4: 1rem;       /* 16px */
+    --space-5: 1.25rem;    /* 20px */
+    --space-6: 1.5rem;     /* 24px */
+    --space-8: 2rem;       /* 32px */
+    --space-12: 3rem;      /* 48px */
+    --space-16: 4rem;      /* 64px */
+
+    /* The inset and section spacing are significantly reduced */
+    --space-inset: var(--space-3);
+    --space-section-md: 3.5rem; /* 56px */
+    --space-section-lg: 5rem;   /* 80px */
+  }
+}
+

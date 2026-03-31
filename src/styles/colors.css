@@ -1,0 +1,70 @@
+:root {
+  /* ======================================================================== */
+  /* Primitive Palette: The raw colors, named by color and shade.             */
+  /* ======================================================================== */
+
+  /* --- Grays --- */
+  --gray-100: #f7fafc;
+  --gray-200: #edf2f7;
+  --gray-300: #e2e8f0;
+  --gray-400: #cbd5e0;
+  --gray-500: #a0aec0;
+  --gray-600: #718096;
+  --gray-700: #4a5568;
+  --gray-800: #2d3748;
+  --gray-900: #1a202c;
+
+  /* --- Blues --- */
+  --blue-100: #ebf8ff;
+  --blue-500: #4299e1;
+  --blue-900: #2a4365;
+
+  /* --- Greens --- */
+  --green-100: #f0fff4;
+  --green-500: #48bb78;
+  --green-900: #22543d;
+
+  /* --- Reds --- */
+  --red-100: #fff5f5;
+  --red-500: #f56565;
+  --red-900: #742a2a;
+
+
+  /* ======================================================================== */
+  /* Semantic Tokens: Colors named by their purpose or usage.               */
+  /* ======================================================================== */
+
+  /* --- Text Colors --- */
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-700);
+  --text-accent: var(--blue-500);
+  --text-success: var(--green-900);
+  --text-error: var(--red-900);
+
+  /* --- Background Colors --- */
+  --background-primary: #ffffff;
+  --background-secondary: var(--gray-100);
+  --background-accent: var(--blue-500);
+  --background-success: var(--green-100);
+  --background-error: var(--red-100);
+
+  /* --- Border Colors --- */
+  --border-primary: var(--gray-300);
+  --border-accent: var(--blue-500);
+
+  /* --- Button Colors --- */
+  --button-primary-background: var(--blue-500);
+  --button-primary-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --text-primary: var(--gray-100);
+  --background-primary: var(--gray-900);
+  --background-secondary: var(--gray-800);
+  --border-primary: var(--gray-700);
+}
+
+
+
+
+

@@ -1,0 +1,42 @@
+/* src/styles/index.css */
+
+/* 1. Reset first, so we have a clean slate */
+@import './reset.css';
+
+/* 2. Variables (Tokens) next, so they are available to everything else */
+@import './colors.css';
+@import './spacing.css';
+
+/* 3. Base styles and combinations last */
+@import './typography.css';
+
+/* If you later add breakpoints, import them here */
+/* @import './breakpoints.css'; */
+
+
+
+body {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--text-primary); /* Assumes color tokens exist */
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+
+small {
+  font-size: var(--font-size-sm);
+}
+
+code {
+  font-family: var(--font-family-mono);
+}

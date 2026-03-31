@@ -1,0 +1,79 @@
+/* ======================================================================== */
+/*                                                                        */
+/*        A MODERN, PRODUCTION-READY CSS RESET (Universal Support)        */
+/*                                                                        */
+/*  This file's job is to create a predictable and consistent foundation   */
+/*  so that responsive styles and breakpoints work reliably across all    */
+/*  browsers and versions.                                                */
+/*                                                                        */
+/* ======================================================================== */
+
+/*
+  1. Use a more intuitive box-sizing model on all elements.
+     This is the most critical rule for enabling predictable responsive design.
+     It ensures that padding and borders do not increase an element's
+     final computed width, making percentage-based layouts work correctly.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove the default margin from all elements.
+     This eliminates the number one cause of inconsistent spacing between
+     browsers and allows you to use modern spacing techniques like Flexbox/Grid
+     `gap` without interference.
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Set core `body` defaults to create a better baseline.
+     - `line-height` is set for better readability.
+     - `-webkit-font-smoothing` improves text rendering quality on many screens.
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  4. Make images, pictures, and videos responsive by default.
+     This rule prevents large media from overflowing their containers on
+     smaller screens, a fundamental requirement for any responsive design.
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  5. Ensure form elements inherit typography.
+     By default, buttons and inputs do not inherit the body's font styles.
+     This rule fixes that, ensuring consistency across your app without
+     you needing to style every form element individually.
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  6. Prevent text overflows.
+     This rule forces long words or strings of text (like URLs) to wrap
+     onto the next line, preventing them from breaking your layout.
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  7. Create a root stacking context.
+     This is a safe-guard for complex applications. It prevents common
+     `z-index` layering issues by creating a new stacking context on the
+     main application element, making pop-ups, modals, and tooltips
+     more predictable.
+*/
+#root, #__next {
+  isolation: isolate;
+}
